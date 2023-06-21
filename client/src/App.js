@@ -1,7 +1,7 @@
 
+import Article from "./components/articles/article";
 import Header from "./components/header";
 import Infoheader from "./components/infoheader";
-import Article from "./components/article"
 function App() {
   return (
     <div className="App">

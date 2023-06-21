@@ -1,14 +1,8 @@
-import getNews from '../api.js'
-import Grid from '@mui/material/Grid';
+import getNews from '../../api.js'
 import { useEffect,useState } from 'react';
 import { Articles } from './articles.jsx';
-let styles={ 
-    alignItems:'center', 
-     width:'60%',
- margin:'20px auto 0 auto'
-        ,textAlign:'center'
-    
-}
+import '../style.css';
+
 const Article=()=>{
     useEffect(()=>{
         dailyNews()
@@ -17,13 +11,11 @@ const Article=()=>{
     const dailyNews=async()=>{
         let response=await getNews();
         setNews(response.data);
-        // console.log(news);
     }
     return(
-        <div
-        style={styles}>
+        <div className="article-box">
           {  News.map((data)=>{
-                return(<Articles data={data} style={styles}/>)
+                return(<Articles data={data} />)
             })}
         </div>
     )
