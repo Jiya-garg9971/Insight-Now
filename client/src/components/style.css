@@ -1,8 +1,22 @@
+.dark-theme {
+  --backgroundcolor: black;
+  --contentColor: white;
+  --boxshadow: 4px 4px 4px white;
+}
+.light-theme {
+  --backgroundcolor: white;
+  --contentColor: black;
+  --boxshadow: 4px 4px 4px grey;
+}
+.App {
+  background-color: var(--backgroundcolor);
+  color: var(--contentColor);
+}
 .Grid1 {
-  border: 2px solid black;
+  border: 2px solid var(--contentColor);
   border-radius: 5px;
-  box-shadow: 8px 8px 8px grey;
-  margin: 8px;
+  box-shadow: var(--boxshadow);
+  margin: 30px;
 }
 .news-img {
   height: 200px;
