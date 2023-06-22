@@ -1,5 +1,7 @@
 import {AppBar,Toolbar} from '@mui/material';
 import {Menu} from '@mui/icons-material';
+import { FaBeer, FaMoon, FaSun } from 'react-icons/fa';
+
 import  './style.css';
 import { useEffect, useState } from 'react';
 
@@ -22,8 +24,8 @@ const Header=()=>{
                 <Menu style={{color:'#000'}}/>
                 <div className='Logo'><img src={logolink} alt="logo" style={{ height:40,padding:2,margin:"auto"}}/><span>InsightNow</span></div>
                 
-            <button style={{color:"black"}} onClick={ToggleTheme}>Button</button>
-            </Toolbar>
+            <button style={{color:"black"}} onClick={ToggleTheme} >{theme=="light-theme"?<FaMoon />:<FaSun/>}</button>
+            </Toolbar> 
 
         </AppBar>
     )

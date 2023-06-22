@@ -51,6 +51,11 @@
   padding: 2px;
   margin: auto;
 }
+button {
+  border-radius: 50px;
+  background-color: white;
+  padding: 5px;
+}
 @media screen and (max-width: 480px) {
   .info-header {
     width: 90%;
